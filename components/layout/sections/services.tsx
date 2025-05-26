@@ -17,25 +17,25 @@ interface ServiceProps {
 }
 const serviceList: ServiceProps[] = [
   {
-    title: "Custom Domain Integration",
+    title: "Payment & Dropout Tracking",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
+      "Monitor tuition payments and student dropouts in real time to identify trends, reduce revenue loss, and make informed decisions about your school's financial health.",
     pro: 0,
   },
   {
     title: "Social Media Integrations",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
+      "Easily share school news, achievements, and updates directly to your social media channels from Edusoft.",
     pro: 0,
   },
   {
     title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
+    description: "Send newsletters, payment reminders, and important announcements to parents and staff with just a few clicks.",
     pro: 0,
   },
   {
     title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
+    description: "Boost your school's online presence and attract more families with built-in SEO tools and best practices.",
     pro: 1,
   },
 ];

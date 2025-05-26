@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Icon } from "@/components/ui/icon";
-import { icons } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Icon } from '@/components/ui/icon';
+import { icons } from 'lucide-react';
 
 interface BenefitsProps {
   icon: string;
@@ -10,28 +10,28 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "Blocks",
-    title: "Build Brand Trust",
+    icon: 'Blocks',
+    title: 'Build Brand Trust',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      'Give parents and staff confidence with transparent, real-time student and financial tracking. Edusoft helps your school build a reputation for reliability and professionalism.',
   },
   {
-    icon: "LineChart",
-    title: "More Leads",
+    icon: 'LineChart',
+    title: 'More Leads',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Attract new students and families by showcasing your school's modern management and reporting capabilities. Edusoft makes your institution stand out in a competitive market.",
   },
   {
-    icon: "Wallet",
-    title: "Higher Conversions",
+    icon: 'Wallet',
+    title: 'Higher Conversions',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      'Streamline admissions and payment processes, making it easy for families to enroll and stay up-to-date with their financial obligations. Increase enrollment and on-time payments.',
   },
   {
-    icon: "Sparkle",
-    title: "Test Marketing Ideas",
+    icon: 'Sparkle',
+    title: 'Test Marketing Ideas',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Quickly launch and measure new programs or offers. Edusoft's analytics let you see what works best for your school community, so you can adapt and grow.",
   },
 ];
 
@@ -46,9 +46,9 @@ export const BenefitsSection = () => {
             Your Shortcut to Success
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
+            Edusoft empowers your school to manage students and finances with
+            confidence, transparency, and efficiency—helping you grow and serve
+            your community better.
           </p>
         </div>
 

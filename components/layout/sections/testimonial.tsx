@@ -1,20 +1,20 @@
-"use client";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+'use client';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Star } from "lucide-react";
+} from '@/components/ui/carousel';
+import { Star } from 'lucide-react';
 
 interface ReviewProps {
   image: string;
@@ -26,53 +26,44 @@ interface ReviewProps {
 
 const reviewList: ReviewProps[] = [
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe",
-    userName: "Product Manager",
+    image: '/logo-minimized.png',
+    name: 'Elena Petrović',
+    userName: 'School Principal',
     comment:
-      "Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
+      'Edusoft has completely transformed how we track student progress and manage tuition payments. Our staff and parents love the transparency!',
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "Sophia Collins",
-    userName: "Cybersecurity Analyst",
+    image: '/logo-minimized.png',
+    name: 'Marko Jovanović',
+    userName: 'Finance Administrator',
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
+      'With Edusoft, I can instantly see which students are behind on payments and generate reports for our board meetings in seconds.',
+    rating: 4.9,
+  },
+  {
+    image: '/logo-minimized.png',
+    name: 'Ivana Kovačević',
+    userName: 'Parent',
+    comment:
+      'I always know my child’s academic status and payment history. Edusoft makes communication with the school so much easier!',
+    rating: 5.0,
+  },
+  {
+    image: '/logo-minimized.png',
+    name: 'Stefan Ilić',
+    userName: 'IT Coordinator',
+    comment:
+      'Setup was simple and the cloud access means our team can work from anywhere. Highly recommended for modern schools.',
     rating: 4.8,
   },
-
   {
-    image: "https://github.com/shadcn.png",
-    name: "Adam Johnson",
-    userName: "Chief Technology Officer",
+    image: '/logo-minimized.png',
+    name: 'Milica Nikolić',
+    userName: 'Teacher',
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    rating: 4.9,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Ethan Parker",
-    userName: "Data Scientist",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      'Edusoft saves me hours every week on admin work. I can focus more on teaching and less on paperwork.',
     rating: 5.0,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Ava Mitchell",
-    userName: "IT Project Manager",
-    comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
-    rating: 5.0,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Isabella Reed",
-    userName: "DevOps Engineer",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    rating: 4.9,
   },
 ];
 
@@ -91,12 +82,12 @@ export const TestimonialSection = () => {
 
       <Carousel
         opts={{
-          align: "start",
+          align: 'start',
         }}
         className="relative w-[80%] sm:w-[90%] lg:max-w-screen-xl mx-auto"
       >
         <CarouselContent>
-          {reviewList.map((review) => (
+          {reviewList.map(review => (
             <CarouselItem
               key={review.name}
               className="md:basis-1/2 lg:basis-1/3"
@@ -104,11 +95,16 @@ export const TestimonialSection = () => {
               <Card className="bg-muted/50 dark:bg-card">
                 <CardContent className="pt-6 pb-0">
                   <div className="flex gap-1 pb-6">
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`size-4 ${
+                          i < Math.round(review.rating)
+                            ? 'fill-primary text-primary'
+                            : 'text-muted-foreground'
+                        }`}
+                      />
+                    ))}
                   </div>
                   {`"${review.comment}"`}
                 </CardContent>
@@ -116,11 +112,14 @@ export const TestimonialSection = () => {
                 <CardHeader>
                   <div className="flex flex-row items-center gap-4">
                     <Avatar>
-                      <AvatarImage
-                        src="https://avatars.githubusercontent.com/u/75042455?v=4"
-                        alt="radix"
-                      />
-                      <AvatarFallback>SV</AvatarFallback>
+                      <AvatarImage src={review.image} alt={review.name} />
+                      <AvatarFallback>
+                        {review.name
+                          .split(' ')
+                          .map(n => n[0])
+                          .join('')
+                          .toUpperCase()}
+                      </AvatarFallback>
                     </Avatar>
 
                     <div className="flex flex-col">

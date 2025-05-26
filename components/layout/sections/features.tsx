@@ -10,40 +10,40 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "TabletSmartphone",
-    title: "Mobile Friendly",
+    icon: "UserCheck",
+    title: "Student Profiles",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Maintain detailed student records, including academic progress, attendance, and financial status—all in one place.",
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
+    icon: "CreditCard",
+    title: "Financial Tracking",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Easily monitor tuition payments, outstanding balances, and generate financial reports for your school or center.",
   },
   {
-    icon: "Goal",
-    title: "Targeted Content",
+    icon: "BarChart3",
+    title: "Analytics Dashboard",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Visualize trends in enrollment, payments, and student performance with real-time analytics and easy-to-read charts.",
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
+    icon: "Bell",
+    title: "Automated Reminders",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Send automatic notifications to parents and staff about upcoming payments, events, or important updates.",
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
+    icon: "ShieldCheck",
+    title: "Secure & Compliant",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Protect sensitive student and financial data with robust security and compliance features built for education.",
   },
   {
-    icon: "Newspaper",
-    title: "Clear Headline",
+    icon: "Cloud",
+    title: "Cloud Access",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Access Edusoft securely from anywhere—at school, at home, or on the go—with our reliable cloud platform.",
   },
 ];
 

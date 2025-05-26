@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -6,8 +6,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Check } from "lucide-react";
+} from '@/components/ui/card';
+import { Check } from 'lucide-react';
+import Link from 'next/link';
 
 enum PopularPlan {
   NO = 0,
@@ -17,7 +18,7 @@ enum PopularPlan {
 interface PlanProps {
   title: string;
   popular: PopularPlan;
-  price: number;
+  price: string;
   description: string;
   buttonText: string;
   benefitList: string[];
@@ -25,48 +26,51 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Free",
+    title: 'Lite',
     popular: 0,
-    price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+    price: '2€ / student ',
+    description: 'Complete software for education centers and schools.',
+    buttonText: 'Contact Sales',
     benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
+      'One software',
+      'Experienced developers',
+      'Advanced metrics',
+      'Multiple themes',
+      'Modern boilerplates',
+      '1 year of updates',
+      'Personal support',
     ],
   },
   {
-    title: "Premium",
+    title: 'Core',
     popular: 1,
-    price: 45,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+    price: '3€ / student ',
+    description: 'Complete software for education centers and schools.',
+    buttonText: 'Contact Sales',
     benefitList: [
-      "4 team member",
-      "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
+      'One software',
+      'Experienced developers',
+      'Advanced metrics',
+      'Multiple themes',
+      'Modern boilerplates',
+      '1 year of updates',
+      'Personal support',
     ],
   },
   {
-    title: "Enterprise",
+    title: 'Pro',
     popular: 0,
-    price: 120,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+    price: '5€ / student ',
+    description: 'Complete software for education centers and schools.',
+    buttonText: 'Contact Sales',
     benefitList: [
-      "10 team member",
-      "20 GB storage",
-      "Upto 10 pages",
-      "Phone & email support",
-      "AI assistance",
+      'One software',
+      'Experienced developers',
+      'Advanced metrics',
+      'Multiple themes',
+      'Modern boilerplates',
+      '1 year of updates',
+      'Personal support',
     ],
   },
 ];
@@ -83,7 +87,7 @@ export const PricingSection = () => {
       </h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
-        Lorem ipsum dolor sit amet consectetur adipisicing reiciendis.
+        Discover flexible pricing plans designed for schools and education centers of all sizes.
       </h3>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
@@ -93,8 +97,8 @@ export const PricingSection = () => {
               key={title}
               className={
                 popular === PopularPlan?.YES
-                  ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]"
-                  : ""
+                  ? 'drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]'
+                  : ''
               }
             >
               <CardHeader>
@@ -112,7 +116,7 @@ export const PricingSection = () => {
 
               <CardContent className="flex">
                 <div className="space-y-4">
-                  {benefitList.map((benefit) => (
+                  {benefitList.map(benefit => (
                     <span key={benefit} className="flex">
                       <Check className="text-primary mr-2" />
                       <h3>{benefit}</h3>
@@ -122,14 +126,16 @@ export const PricingSection = () => {
               </CardContent>
 
               <CardFooter>
-                <Button
-                  variant={
-                    popular === PopularPlan?.YES ? "default" : "secondary"
-                  }
-                  className="w-full"
-                >
-                  {buttonText}
-                </Button>
+                <Link href="#contact" className='w-full'>
+                  <Button
+                    variant={
+                      popular === PopularPlan?.YES ? 'default' : 'secondary'
+                    }
+                    className="w-full"
+                  >
+                    {buttonText}
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           )

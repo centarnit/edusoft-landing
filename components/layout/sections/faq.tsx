@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from '@/components/ui/accordion';
 
 interface FAQProps {
   question: string;
@@ -13,33 +13,34 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free NextJS Shadcn template.",
-    value: "item-1",
-  },
-  {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
+    question: 'What is Edusoft?',
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
-    value: "item-2",
+      'Edusoft is a modern software platform designed for schools and education centers to track student progress, manage tuition payments, and monitor financial health in real time.',
+    value: 'item-1',
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
+    question: 'How does Edusoft help with financial tracking?',
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
-    value: "item-3",
+      'Edusoft provides a clear overview of all student payments, outstanding balances, and financial trends, making it easy for administrators to manage tuition and reduce revenue loss.',
+    value: 'item-2',
   },
   {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    value: "item-4",
+    question: "Can parents access their child's academic and payment status?",
+    answer:
+      "Yes, parents can securely log in to view their child's academic progress, attendance, and payment history, ensuring transparency and better communication with the school.",
+    value: 'item-3',
   },
   {
-    question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
-    value: "item-5",
+    question: "Is my school's data secure with Edusoft?",
+    answer:
+      'Absolutely. Edusoft uses industry-standard security practices and encryption to protect all student and financial data, ensuring compliance with privacy regulations.',
+    value: 'item-4',
+  },
+  {
+    question: 'Can Edusoft be accessed from anywhere?',
+    answer:
+      'Yes, Edusoft is a cloud-based platform, so you can access it securely from any device, anywhere, at any time.',
+    value: 'item-5',
   },
 ];
 

@@ -55,18 +55,18 @@ const routeList: RouteProps[] = [
 
 const featureList: FeatureProps[] = [
   {
-    title: 'Showcase Your Value ',
-    description: 'Highlight how your product solves user problems.',
+    title: 'All-in-One Student Management ',
+    description:
+      'Easily track student progress, attendance, and records in one place.',
   },
   {
-    title: 'Build Trust',
+    title: 'Transparent Financial Tracking',
     description:
-      'Leverages social proof elements to establish trust and credibility.',
+      'Monitor tuition payments and generate reports for your school or center.',
   },
   {
-    title: 'Capture Leads',
-    description:
-      'Make your lead capture form visually appealing and strategically.',
+    title: 'Cloud Access Anywhere',
+    description: 'Access your school’s data securely from any device, anytime.',
   },
 ];
 
@@ -74,7 +74,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const { theme } = useTheme();
   return (
-    <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
+    <header className="shadow-inner w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card/70 backdrop-blur-md">
       <Link href="/" className="font-bold text-lg flex items-center">
         <Image
           src={theme === 'light' ? '/logo-light.png' : '/logo-dark.png'}
@@ -101,8 +101,15 @@ export const Navbar = () => {
               <SheetHeader className="mb-4 ml-4">
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
-                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-                    Shadcn
+                    <Image
+                      src={
+                        theme === 'light' ? '/logo-light.png' : '/logo-dark.png'
+                      }
+                      alt="Logo"
+                      width={128}
+                      height={128}
+                      quality={100}
+                    />
                   </Link>
                 </SheetTitle>
               </SheetHeader>
@@ -141,9 +148,10 @@ export const Navbar = () => {
             <NavigationMenuContent>
               <div className="grid w-[600px] grid-cols-2 gap-5 p-4">
                 <Image
-                  src="https://avatars.githubusercontent.com/u/75042455?v=4"
-                  alt="RadixLogo"
+                  src="/logo-minimized.png"
+                  alt="EdusoftLogo"
                   className="h-full w-full rounded-md object-cover"
+                  quality={100}
                   width={600}
                   height={600}
                 />
